@@ -27,4 +27,10 @@ $(document).ready(function(){
   setInterval(update, 1000);
 });
 
+$(document).submit(function(event) {
+  event.preventDefault();
+  var inputAlarm = $('#alarm-time').val();
+  $("#alarm-output").text(inputAlarm); 
+})
+
 },{"./../js/alarmclock.js":1}]},{},[2]);
