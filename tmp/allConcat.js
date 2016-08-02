@@ -17,5 +17,7 @@ $(document).ready(function(){
 $(document).submit(function(event) {
   event.preventDefault();
   var inputAlarm = $('#alarm-time').val();
-  $("#alarm-output").text(inputAlarm); 
+  inputAlarm = moment(inputAlarm).format('h:mm:ss a')
+  $("#alarm-output").text(inputAlarm);
+  var setAlarm = inputAlarm;
 })
